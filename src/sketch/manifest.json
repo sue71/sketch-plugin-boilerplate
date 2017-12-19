@@ -1,0 +1,22 @@
+{
+  "author" : "sue71",
+  "commands" : [
+    {
+      "script" : "list.js",
+      "handler": "onRun",
+      "shortcut": "",
+      "name": "list",
+      "identifier": "list"
+    }
+  ],
+  "menu": {
+    "items": [
+      "list"
+    ]
+  },
+  "identifier": "com.sketchapp.sue71.sketch-plugin-boilerplate",
+  "version" : "1.0",
+  "description" : "Sketch plugins boilerplate",
+  "authorEmail" : "s.masaki07@gmail.com",
+  "name" : "sketch-plugin-boilerplate"
+}
