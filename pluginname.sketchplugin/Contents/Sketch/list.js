@@ -297,7 +297,6 @@ function WebUI (context, frameLocation, options) {
         return
       }
     }
-    log("webUI#close");
     panel.close()
     threadDictionary.removeObjectForKey(options.identifier)
     coScript.setShouldKeepAround(false)
@@ -632,5 +631,3 @@ function getColorCode(layer) {
   }
 }
 that['onRun'] = __skpm_run.bind(this, 'default')
-
-//# sourceMappingURL=list.js.map

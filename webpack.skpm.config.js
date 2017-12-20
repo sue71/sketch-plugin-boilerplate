@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackDefinePlugin = webpack.DefinePlugin;
 
 /**
