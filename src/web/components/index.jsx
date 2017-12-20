@@ -1,23 +1,15 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import AppContainer from "./AppContainer";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import App from './App';
+import call from 'sketch-module-web-view/client';
 
-require("../index.html");
-require("antd/dist/antd.css");
+// Copy html by webpack
+require('../index.html');
 
-const appContainer = ReactDOM.render(
-  <AppContainer />,
-  document.getElementById("app")
-);
+const appContainer = ReactDOM.render(<App />, document.getElementById('app'));
 
 // Javascript bridge called by sketch script
-window.bridge = action => {
-  console.log(action);
-  switch (action.type) {
-    case "loadLayers":
-      appContainer.setState({
-        layers: action.payload
-      });
-      break;
-  }
+window.bridge = message => {
+  console.log(message);
+  call('callFromJS', 'pong');
 };

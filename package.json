@@ -13,14 +13,13 @@
   "skpm": {
     "name": "sketch-plugin-boilerplate",
     "manifest": "src/sketch/manifest.json",
-    "main": "pluginname.sketchplugin"
+    "main": "example.sketchplugin"
   },
   "resources": [
     "src/web/index.js"
   ],
   "license": "ISC",
   "dependencies": {
-    "antd": "~2.13.7",
     "react": "~16.0.0",
     "react-dom": "~16.0.0",
     "sketch-module-web-view": "~0.2.6"
