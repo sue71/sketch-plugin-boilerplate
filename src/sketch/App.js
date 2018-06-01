@@ -42,7 +42,7 @@ export class App {
       onPanelClose: () => {
         WebUI.clean();
       },
-      uiDelegate: {}, // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
+      uiDelegate: {}, // see https://developer.apple.com/reference/webkit/webuidelegate?language=objc
       handlers: {
         callFromJS: message => {
           log(message);

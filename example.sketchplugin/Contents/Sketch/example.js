@@ -90,6 +90,7 @@ function onRun(context) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sketch_module_web_view__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_sketch_module_web_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_sketch_module_web_view__);
 
+const UI = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"sketch/ui\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 /**
  * App
@@ -128,12 +129,13 @@ class App {
           log('App#didFinishLoadForFrame');
           const message = 'ping';
           this.webUI.eval(`window.bridge(${message})`);
+          UI.message('test');
         }
       },
       onPanelClose: () => {
         __WEBPACK_IMPORTED_MODULE_0_sketch_module_web_view___default.a.clean();
       },
-      uiDelegate: {}, // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
+      uiDelegate: {}, // see: https://developer.apple.com/reference/webkit/webuidelegate?language=objc
       handlers: {
         callFromJS: message => {
           log(message);
